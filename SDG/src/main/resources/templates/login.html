@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+
+    <head>
+   		<link rel="stylesheet" href="css/vital.css" id="vital">
+  		<link rel="stylesheet" href="css/style.css" id="style">
+	</head>
+
+    <body>
+	<div class="body">
+        <div class="row header center bg-transparent">
+            <h1>
+                AGROPARQUE GANADERO DEL SURESTE
+            </h1>
+        </div>
+        <div class="contents bg-transparent">
+            <div class="col-1-3 padding"></div>
+            <form class="col-1-3 padding" onsubmit="this.action = '#{request.contextPath}/menu.mvc';">
+                <br/>
+                <panelGrid columns="2" cellpadding="5">
+                    <outputText value="USUARIO: " styleClass="whiteLetter"/>
+                    <inputText id="user"/>
+                    <outputText value="CONTRASEÑA: " styleClass="whiteLetter" />
+                    <password id="psw" />
+                </panelGrid>
+                <commandButton value="Log In" ajax="false"/>
+                <div class="card-body">
+               <p class="text-center py-2">SIGN IN TO CONTINUE.</p>
+               <form class="mb-3" id="loginForm" novalidate>
+                  <div class="form-group">
+                     <div class="input-group with-focus">
+                        <input class="form-control border-right-0" id="exampleInputEmail1" type="email" placeholder="Usuario" autocomplete="off" required>
+                        <div class="input-group-append">
+                           <span class="input-group-text text-muted bg-transparent border-left-0">
+                              <em class="fa fa-envelope"></em>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="input-group with-focus">
+                        <input class="form-control border-right-0" id="exampleInputPassword1" type="password" placeholder="Contraseña" required>
+                        <div class="input-group-append">
+                           <span class="input-group-text text-muted bg-transparent border-left-0">
+                              <em class="fa fa-lock"></em>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="clearfix">
+                     <div class="checkbox c-checkbox float-left mt-0">
+                        <label>
+                           <input type="checkbox" value="" name="remember">
+                           <span class="fa fa-check"></span> Remember Me</label>
+                     </div>
+                     <div class="float-right">
+                        <a class="text-muted" href="recover.html">Forgot your password?</a>
+                     </div>
+                  </div>
+                  <button class="btn btn-block btn-primary mt-3" type="submit">Login</button>
+               </form>
+               
+            </div>
+                    
+            </form>
+            <div class="col-1-3"></div>
+        </div>
+        <div class="row footer bg-transparent">
+            <div class="circleBase type1"></div>
+        </div>
+    </div>    
+    </body>
+</html>
